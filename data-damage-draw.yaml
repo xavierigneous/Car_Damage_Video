@@ -1,0 +1,12 @@
+names:
+- Bonnet
+- Bumper
+- Dickey
+- Door
+- Fender
+- Light
+- Windshield
+nc: 7
+test: /content/Car-Damage-detection-4/test/images
+train: /content/Car-Damage-detection-4/train/images
+val: /content/Car-Damage-detection-4/valid/images

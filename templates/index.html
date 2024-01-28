@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOLOv8 Live Object Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Real-Time Object Detection with YOLOv8</h1>
+  </header>
+  <main>
+    <div class="video-container">
+      <img id="video_feed" src="{{ url_for('video_feed') }}">
+    </div>
+    <div class="info-panel">
+      <p>FPS: <span id="fps"></span></p>
+      <p>Detected Objects:</p>
+      <ul id="detected-objects"></ul>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
