@@ -5,7 +5,7 @@ from ultralytics import YOLO
 from random import randint
 
 app = flask.Flask(__name__)
-camera = cv2.VideoCapture(0)  # Access webcam
+camera = cv2.VideoCapture(1)  # Access webcam
 
 model = YOLO("best.onnx")  # Load YOLOv8 model (replace with your model path)
 
