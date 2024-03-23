@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1 style="background-color:powderblue; font-family:verdana;" align="middle">Car Damage Classifier</h1>
+</head>
+<body>
+<label style="font-family:verdana;" align="middle">Drag/drop or upload your car images, and assess the damage incurred by it.</label>
+<form method="post" enctype="multipart/form-data" name="file" align="middle">
+
+    <style>
+    .upload-container {
+        position: relative;
+    }
+    .upload-container input {
+        border: 1px solid #92b0b3;
+        background: #f1f1f1;
+        outline: 2px dashed #92b0b3;
+        outline-offset: -10px;
+        padding: 100px 0px 100px 100px;
+        text-align: center !important;
+        width: 300px;
+    }
+    .upload-container input:hover {
+        background: #ddd;
+    }
+    .upload-container:before {
+        position: absolute;
+        bottom: 50px;
+        left: 100px;
+        color: #3f8188;
+        font-weight: 900;
+    }
+    .upload-btn {
+        margin-left: 100px;
+        padding: 7px 20px;
+    }
+</style>
+
+  <style>
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  border-radius: 2px;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  border-radius: 2px;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+</style>
+</form>
+</body>
+<br>
+<style>
+
+        div.polaroid {
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          background-color: white;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          margin-bottom: 25px;
+        }
+
+        div.container {
+          padding: 10px 20px;
+        }
+    </style>
+  <div class="polaroid" align="middle">
+
+      <br><label size="200" font-family='Times New Roman'>Damage Report</label><br>
+      <img id="video_feed" src="{{ url_for('video_feed') }}">
+<p>
+<p>
+</html>

@@ -5,9 +5,11 @@ from ultralytics import YOLO
 from random import randint
 
 app = flask.Flask(__name__)
-camera = cv2.VideoCapture(1)  # Access webcam
+camera = cv2.VideoCapture(0)  # Access webcam
 
-model = YOLO("best.onnx")  # Load YOLOv8 model (replace with your model path)
+# model = YOLO("damage_severity.pt", "damage_locate.pt")  # Load YOLOv8 model (replace with your model path)
+# model = YOLO("damage_severity.pt")  # Load YOLOv8 model (replace with your model path)
+model = YOLO("damage_location_best.onnx")  # Load YOLOv8 model (replace with your model path)
 
 def damage_detect(frame):
     
@@ -27,7 +29,7 @@ def damage_detect(frame):
 
 @app.route('/')
 def index():
-    return flask.render_template('index.html')
+    return flask.render_template('Damage_Classifier.html')
 
 def generate_frames():
     while True:
